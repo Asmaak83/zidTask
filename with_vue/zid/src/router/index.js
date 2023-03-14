@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeApp from "@/components/global/HomeApp.vue"
 import StatsApp from "@/components/global/StatsApp.vue"
 import SkillsApp from "@/components/global/SkillsApp.vue";
+import StoreApp from "@/components/global/StoreApp.vue"
 
 
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
   name:"app",
   component: SkillsApp,
  },
+ {
+ path :"/New",
+ name:"New",
+ component: StoreApp,
+},
 ];
 
 const router = createRouter({

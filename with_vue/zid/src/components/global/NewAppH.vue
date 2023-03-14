@@ -1,33 +1,51 @@
+// eslint-disable-next-line vue/valid-template-root
 <template>
-  <div class="headerH">
-    <div class="navba">
-      <ul id="nav">
-        <router-link to="/New">
-          <li>
-            <a>طور تطبيق</a>
-          </li>
-        </router-link>
-        <router-link to="/help">
-          <li>
-            <a>التطبيقات</a>
-          </li>
-        </router-link>
-        <router-link to="/about">
-          <li>
-            <a>التصنيفات</a>
-          </li>
-        </router-link>
-        <router-link to="/">
-          <li>
-            <a>الرئيسية</a>
-          </li>
-        </router-link>
-      </ul>
+  <nav class="navbar navbar-expand-lg sticky-top bg-light my-lg-0">
+    <div
+      class="container d-flex flex-row-reverse md-d-flex md-flex-colomn-reverse"
+    >
+      <div class="logo">
+        <img class="ms-4" src="./image/ZAM_1.png" />
+      </div>
+      <button
+        class="text-decoration-none navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#main"
+        aria-controls="main"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main">
+        <ul class="navbar-nav ms-auto mb-lg-0">
+          <router-link to="/New" class="text-decoration-none">
+            <li class="nav-item">
+              <a class="nav-link p-2 me-3 text-dark">طور تطبيق</a>
+            </li>
+          </router-link>
+          <router-link to="/help" class="text-decoration-none">
+            <li class="nav-item">
+              <a class="nav-link p-2 text-dark">التطبيقات</a>
+            </li>
+          </router-link>
+          <router-link to="/about" class="text-decoration-none">
+            <li class="nav-item">
+              <a class="nav-link nounderline p-2 text-dark">التصنيفات</a>
+            </li>
+          </router-link>
+          <router-link to="/" class="text-decoration-none">
+            <li class="nav-item">
+              <a class="nav-link p-2 text-dark" aria-current="page">
+                الرئيسية</a
+              >
+            </li>
+          </router-link>
+        </ul>
+      </div>
     </div>
-    <div class="logo">
-      <img src="./image/ZAM_1.png" />
-    </div>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -36,33 +54,17 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.headerH {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.nav-link {
+}
+nav ul li {
+  padding: 0 50px 0 20px;
 
-  .logo {
-    float: right;
+  a:hover {
+    text-decoration: none;
   }
-  .logo img {
-    width: 140px;
-    height: 40px;
-    padding-left: 40px;
-  }
-  ul {
-    float: right;
-    margin: 0;
-    li {
-      padding: 10px 30px 20px 10px;
-      display: inline-block;
-      a {
-        text-decoration: none;
-        font-size: 16px;
-        padding: 0px 10px;
-        color: black;
-      }
-    }
-  }
+}
+.logo img {
+  width: 140px;
+  height: 40px;
 }
 </style>
